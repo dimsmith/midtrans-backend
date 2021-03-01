@@ -10,6 +10,7 @@ $api_url = $is_production ?
 
 
 // Check if request doesn't contains `/charge` in the url/path, display 404
+print_r($_SERVER["REQUEST_URI"]);
 if( !strpos($_SERVER['REQUEST_URI'], '/charge') ) {
     http_response_code(404);
     echo "wrong path, make sure it's `/charge`"; exit();
