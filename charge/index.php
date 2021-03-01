@@ -15,6 +15,7 @@ if( !strpos($_SERVER['REQUEST_URI'], 'charge') ) {
     echo "wrong path, make sure it's `/charge`"; exit();
 }
 // Check if method is not HTTP POST, display 404
+print_r($_SERVER['REQUEST_METHOD']);
 if( $_SERVER['REQUEST_METHOD'] !== 'POST'){
     http_response_code(404);
     echo "Page not found or wrong HTTP request method is used"; exit();
